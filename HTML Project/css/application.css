@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box; }
+
+hr {
+  width: 75%; }
+
+.header {
+  padding: 15em 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 20em;
+  align-items: center;
+  font-family: "Cormorant SC", serif;
+  background-size: cover;
+  color: white; }
+  .header h1 {
+    margin-bottom: 0;
+    color: black; }
+  .header h2 {
+    margin: 10px 0 20px 0px;
+    color: black; }
+  .header a {
+    text-decoration: none; }
+  .header .nav {
+    list-style-type: none;
+    padding-left: 0; }
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  padding-left: 0; }
+footer li {
+  list-style-type: none;
+  margin: .25em; }
+  footer li img {
+    width: 25px; }
+footer p {
+  text-align: center;
+  font-size: 12px; }
+
+/*# sourceMappingURL=application.css.map */
