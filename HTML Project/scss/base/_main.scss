@@ -7,42 +7,94 @@ hr {
     width: 75%;
 }
 
-.header {
-    padding: 15em 0;
+// Headers
+
+
+// index header
+
+        .header {
+            padding: 15em 0;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            height: 20em;
+            align-items: center;
+            font-family: $header_font;
+            background-size: url(../img/fishbowl.jpg) cover;
+            color: white;
+
+
+            h1 {
+                margin-bottom: 0;
+                color: black;
+            }
+
+            h2 {
+                margin: 10px 0 20px 0px;
+                color: black;
+            }
+
+            // h3 {
+            //     font-size: 10px;
+            //     margin-top: .75em;
+            // }
+
+            a {
+                text-decoration: none;
+            }
+
+            .nav {
+                list-style-type: none;
+                padding-left: 0;
+            }
+        }
+
+
+// all other headers
+
+        .header2 {
+            margin: 4em;
+            display: flex;
+            padding-top: 20px;
+
+            h1 {
+                margin: 0 auto 0 0;
+            }
+
+            ul {
+                display: flex;
+                margin: 0 40px;
+
+                li {
+                    list-style-type: none;
+                    margin: 0 .25em;
+                }
+            }
+        }
+
+// Gallery
+
+.images {
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    height: 20em;
-    align-items: center;
-    font-family: $header_font;
-    background-size: cover;
-    color: white;
+    flex-wrap: wrap;
 
-
-    h1 {
-        margin-bottom: 0;
-        color: black;
+    img {
+        width: 85%;
     }
 
-    h2 {
-        margin: 10px 0 20px 0px;
-        color: black;
-    }
-
-    // h3 {
-    //     font-size: 10px;
-    //     margin-top: .75em;
-    // }
-
-    a {
-        text-decoration: none;
-    }
-
-    .nav {
+    li {
         list-style-type: none;
-        padding-left: 0;
+
     }
 }
+
+
+
+
+
+
+// All footers
 
 footer {
 

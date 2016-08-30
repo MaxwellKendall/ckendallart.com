@@ -12,7 +12,7 @@ hr {
   height: 20em;
   align-items: center;
   font-family: "Cormorant SC", serif;
-  background-size: cover;
+  background-size: url(../img/fishbowl.jpg) cover;
   color: white; }
   .header h1 {
     margin-bottom: 0;
@@ -25,6 +25,28 @@ hr {
   .header .nav {
     list-style-type: none;
     padding-left: 0; }
+
+.header2 {
+  margin: 4em;
+  display: flex;
+  padding-top: 20px; }
+  .header2 h1 {
+    margin: 0 auto 0 0; }
+  .header2 ul {
+    display: flex;
+    margin: 0 40px; }
+    .header2 ul li {
+      list-style-type: none;
+      margin: 0 .25em; }
+
+.images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .images img {
+    width: 85%; }
+  .images li {
+    list-style-type: none; }
 
 footer ul {
   display: flex;
