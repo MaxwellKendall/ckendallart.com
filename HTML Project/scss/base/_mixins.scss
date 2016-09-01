@@ -1,0 +1,20 @@
+@mixin media-query($breakpoint){
+    @media (min-width: $breakpoint){
+        @content;
+    }
+}
+
+// @mixin font-size($fontsize) {
+//     p {
+//         font-size: $fontsize;
+//     }
+//     h1 {
+//         font-size: $fontsize * 3;
+//     }
+//     h2 {
+//         font-size: $fontsize * 2;
+//     }
+//     h3 {
+//         font-size: $fontsize * 1.5;
+//     }
+// }

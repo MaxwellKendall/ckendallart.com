@@ -7,70 +7,12 @@ hr {
     width: 75%;
 }
 
-// Headers
+h1, h2, h3, p {
+    font-family: $header_font;
+    color: black;
+}
 
 
-// index header
-
-        .header {
-            padding: 15em 0;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            height: 20em;
-            align-items: center;
-            font-family: $header_font;
-            background-size: url(../img/fishbowl.jpg) cover;
-            color: white;
-
-
-            h1 {
-                margin-bottom: 0;
-                color: black;
-            }
-
-            h2 {
-                margin: 10px 0 20px 0px;
-                color: black;
-            }
-
-            // h3 {
-            //     font-size: 10px;
-            //     margin-top: .75em;
-            // }
-
-            a {
-                text-decoration: none;
-            }
-
-            .nav {
-                list-style-type: none;
-                padding-left: 0;
-            }
-        }
-
-
-// all other headers
-
-        .header2 {
-            margin: 4em;
-            display: flex;
-            padding-top: 20px;
-
-            h1 {
-                margin: 0 auto 0 0;
-            }
-
-            ul {
-                display: flex;
-                margin: 0 40px;
-
-                li {
-                    list-style-type: none;
-                    margin: 0 .25em;
-                }
-            }
-        }
 
 // Gallery
 
@@ -87,36 +29,4 @@ hr {
         list-style-type: none;
 
     }
-}
-
-
-
-
-
-
-// All footers
-
-footer {
-
-    ul {
-        display: flex;
-        justify-content: center;
-        padding-left: 0;
-    }
-
-    li {
-        list-style-type: none;
-        // padding-left: 0;
-        margin: .25em;
-
-        img {
-            width: 25px;
-        }
-    }
-
-    p {
-        text-align: center;
-        font-size: 12px;
-    }
-
 }

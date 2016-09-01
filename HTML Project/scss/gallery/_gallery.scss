@@ -1,0 +1,21 @@
+.images {
+
+    li {
+        margin: 1em;
+    }
+
+    img {
+        // width: 75%;
+        // height: 75%;
+        width: 250px;
+        height: 250px;
+        @include media-query($tablet) {
+            width: 350px;
+            height: 450px;
+        }
+        @include media-query($desktop) {
+            width: 400px;
+            height: 500px;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+
+
+
+    footer {
+
+        ul {
+            display: flex;
+            justify-content: center;
+            padding-left: 0;
+            li {
+                list-style-type: none;
+                // padding-left: 0;
+                margin: .25em;
+                img {
+                    width: 25px;
+                    @include media-query($tablet) {
+                        width: 35px;
+                    }
+                    @include media-query($desktop) {
+                        width: 50px;
+                    }
+                }
+                &:hover {
+                        img {
+                            background: rgba(0,0,255,0.5);
+                            transition: background 1s ease-in;
+                            transform: scale(1.8) rotate(5deg);
+                        }
+                    }
+
+                .social-icon {
+                    background: lightgray;
+                    border-radius: 25px;
+                }
+            }
+        }
+        p {
+            text-align: center;
+            font-size: 12px;
+        }
+
+    }
