@@ -1,6 +1,11 @@
 * {
   box-sizing: border-box; }
 
+.main-page {
+  background-image: url("../img/test.jpeg");
+  background-size: cover;
+  background-position: center; }
+
 hr {
   width: 75%; }
 
@@ -24,21 +29,26 @@ h1, h2, h3, p {
   flex-direction: column;
   height: 20em;
   align-items: center;
-  font-family: "Cormorant SC", serif;
-  background: url("../img/fishbowl.jpg") no-repeat center; }
+  font-family: "Cormorant SC", serif; }
   .header h1 {
     margin-bottom: 0; }
   .header h2 {
-    margin: 10px 0 20px 0px;
-    color: black; }
+    margin: 10px 0 10px 0px;
+    color: white; }
+  .header li:hover {
+    transform: scale(1.2);
+    transition: transform .25s ease-in; }
   .header a {
     text-decoration: none;
-    color: black; }
+    color: white; }
     .header a:hover {
-      color: rgba(0, 0, 225, 0.5); }
+      color: rgba(0, 0, 225, 0.5);
+      transform: scale(10);
+      transition: color 0.7s ease-in; }
   .header .nav {
     list-style-type: none;
-    padding-left: 0; }
+    padding-left: 0;
+    margin: 0; }
 
 .header2 {
   padding-bottom: 4em;
@@ -46,7 +56,7 @@ h1, h2, h3, p {
   flex-direction: column;
   padding-top: 20px;
   font-family: "Cormorant SC", serif; }
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     .header2 {
       flex-direction: row; } }
   .header2 h1 {
@@ -57,13 +67,13 @@ h1, h2, h3, p {
     display: block;
     margin: auto;
     padding: 0; }
-    @media (min-width: 1024px) {
+    @media (min-width: 768px) {
       .header2 ul {
         display: flex;
         margin: 0 0 0 auto; } }
     .header2 ul li {
       list-style-type: none; }
-      @media (min-width: 1024px) {
+      @media (min-width: 768px) {
         .header2 ul li {
           margin: 0 .25em; } }
 
@@ -76,10 +86,10 @@ footer ul {
     margin: .25em; }
     footer ul li img {
       width: 25px; }
-      @media (min-width: 1024px) {
+      @media (min-width: 768px) {
         footer ul li img {
           width: 35px; } }
-      @media (min-width: 768px) {
+      @media (min-width: 1024px) {
         footer ul li img {
           width: 50px; } }
     footer ul li:hover img {
@@ -87,7 +97,6 @@ footer ul {
       transition: background 1s ease-in;
       transform: scale(1.8) rotate(5deg); }
     footer ul li .social-icon {
-      background: lightgray;
       border-radius: 25px; }
 footer p {
   text-align: center;
@@ -98,11 +107,11 @@ footer p {
 .images img {
   width: 250px;
   height: 250px; }
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     .images img {
       width: 350px;
       height: 450px; } }
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     .images img {
       width: 400px;
       height: 500px; } }

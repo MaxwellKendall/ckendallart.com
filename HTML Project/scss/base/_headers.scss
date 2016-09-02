@@ -11,7 +11,6 @@
             height: 20em;
             align-items: center;
             font-family: "Cormorant SC", serif;
-            background: url("../img/fishbowl.jpg") no-repeat center;
 
             h1 {
                 margin-bottom: 0;
@@ -19,8 +18,8 @@
             }
 
             h2 {
-                margin: 10px 0 20px 0px;
-                color: black;
+                margin: 10px 0 10px 0px;
+                color: white;
             }
 
             // h3 {
@@ -28,18 +27,25 @@
             //     margin-top: .75em;
             // }
 
+            li:hover {
+                transform: scale(1.2);
+                transition: transform .25s ease-in;
+            }
+
             a {
                 text-decoration: none;
-                color: black;
-
+                color: white;
                 &:hover {
                     color: rgba(0,0,225,0.5);
+                    transform: scale(10);
+                    transition: color 0.7s ease-in;
                 }
             }
 
             .nav {
                 list-style-type: none;
                 padding-left: 0;
+                margin: 0;
             }
         }
 
