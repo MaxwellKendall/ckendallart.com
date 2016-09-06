@@ -1,7 +1,6 @@
 
-
-
     footer {
+        margin-top: auto;
 
         ul {
             display: flex;
@@ -30,6 +29,7 @@
 
                 .social-icon {
                     border-radius: 25px;
+                    background: lightslategray;
                 }
             }
         }

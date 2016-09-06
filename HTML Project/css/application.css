@@ -13,6 +13,15 @@ h1, h2, h3, p {
   font-family: "Cormorant SC", serif;
   color: black; }
 
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 60vh;
+  padding: 0 .75em; }
+
+.background {
+  background: linear-gradient(0deg, bisque, white); }
+
 .images {
   display: flex;
   justify-content: center;
@@ -21,6 +30,19 @@ h1, h2, h3, p {
     width: 85%; }
   .images li {
     list-style-type: none; }
+
+.icon-source {
+  font-size: 9px;
+  text-align: center; }
+
+.about-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .about-wrapper .about-photo {
+    width: 35%;
+    border-style: none;
+    border-radius: 15em; }
 
 .header {
   padding: 15em 0;
@@ -31,10 +53,12 @@ h1, h2, h3, p {
   align-items: center;
   font-family: "Cormorant SC", serif; }
   .header h1 {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    padding-left: 1em; }
   .header h2 {
     margin: 10px 0 10px 0px;
-    color: white; }
+    color: white;
+    padding-right: 1em; }
   .header li:hover {
     transform: scale(1.2);
     transition: transform .25s ease-in; }
@@ -55,18 +79,21 @@ h1, h2, h3, p {
   display: flex;
   flex-direction: column;
   padding-top: 20px;
-  font-family: "Cormorant SC", serif; }
+  font-family: "Cormorant SC", serif;
+  align-items: center; }
   @media (min-width: 768px) {
     .header2 {
       flex-direction: row; } }
   .header2 h1 {
-    align-self: center; }
+    align-self: center;
+    padding-left: 1em; }
   .header2 a {
     text-decoration: none; }
   .header2 ul {
     display: block;
     margin: auto;
-    padding: 0; }
+    padding: 0;
+    padding-right: 1em; }
     @media (min-width: 768px) {
       .header2 ul {
         display: flex;
@@ -77,30 +104,33 @@ h1, h2, h3, p {
         .header2 ul li {
           margin: 0 .25em; } }
 
-footer ul {
-  display: flex;
-  justify-content: center;
-  padding-left: 0; }
-  footer ul li {
-    list-style-type: none;
-    margin: .25em; }
-    footer ul li img {
-      width: 25px; }
-      @media (min-width: 768px) {
-        footer ul li img {
-          width: 35px; } }
-      @media (min-width: 1024px) {
-        footer ul li img {
-          width: 50px; } }
-    footer ul li:hover img {
-      background: rgba(0, 0, 255, 0.5);
-      transition: background 1s ease-in;
-      transform: scale(1.8) rotate(5deg); }
-    footer ul li .social-icon {
-      border-radius: 25px; }
-footer p {
-  text-align: center;
-  font-size: 12px; }
+footer {
+  margin-top: auto; }
+  footer ul {
+    display: flex;
+    justify-content: center;
+    padding-left: 0; }
+    footer ul li {
+      list-style-type: none;
+      margin: .25em; }
+      footer ul li img {
+        width: 25px; }
+        @media (min-width: 768px) {
+          footer ul li img {
+            width: 35px; } }
+        @media (min-width: 1024px) {
+          footer ul li img {
+            width: 50px; } }
+      footer ul li:hover img {
+        background: rgba(0, 0, 255, 0.5);
+        transition: background 1s ease-in;
+        transform: scale(1.8) rotate(5deg); }
+      footer ul li .social-icon {
+        border-radius: 25px;
+        background: lightslategray; }
+  footer p {
+    text-align: center;
+    font-size: 12px; }
 
 .images li {
   margin: 1em; }
@@ -115,5 +145,39 @@ footer p {
     .images img {
       width: 400px;
       height: 500px; } }
+
+#overlay {
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  max-height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  bottom: 0;
+  display: none;
+  z-index: 2;
+  justify-content: center;
+  align-items: center; }
+  #overlay img {
+    margin: auto;
+    max-height: 600px;
+    max-width: 500px; }
+
+#arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  margin: auto; }
+  #arrows #rightArrow,
+  #arrows #leftArrow {
+    display: none; }
+    #arrows #rightArrow:hover,
+    #arrows #leftArrow:hover {
+      cursor: pointer; }
+    #arrows #rightArrow img,
+    #arrows #leftArrow img {
+      z-index: 3; }
 
 /*# sourceMappingURL=application.css.map */
