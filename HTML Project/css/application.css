@@ -155,28 +155,33 @@ footer {
   top: 0;
   bottom: 0;
   display: none;
-  z-index: 2;
   justify-content: center;
   align-items: center; }
   #overlay img {
     margin: auto;
     max-height: 600px;
-    max-width: 500px; }
+    max-width: 500px;
+    position: fixed; }
 
 #arrows {
   display: flex;
   justify-content: center;
   align-items: center;
   align-self: center;
-  margin: auto; }
+  margin: auto;
+  position: fixed;
+  top: 50%;
+  z-index: 3; }
   #arrows #rightArrow,
   #arrows #leftArrow {
+    position: fixed;
     display: none; }
     #arrows #rightArrow:hover,
     #arrows #leftArrow:hover {
       cursor: pointer; }
-    #arrows #rightArrow img,
-    #arrows #leftArrow img {
-      z-index: 3; }
+  #arrows #leftArrow {
+    left: 380px; }
+  #arrows #rightArrow {
+    left: 1000px; }
 
 /*# sourceMappingURL=application.css.map */

@@ -8,7 +8,6 @@
     top: 0;
     bottom: 0;
     display: none;
-    z-index: 2;
     justify-content: center;
     align-items: center;
 
@@ -16,6 +15,7 @@
         margin: auto;
         max-height: 600px;
         max-width: 500px;
+        position: fixed;
     //     @include media-query($tablet) {
     //     height: 300px;
     //     width: 400px;
@@ -34,14 +34,23 @@
         align-items: center;
         align-self: center;
         margin: auto;
+        position: fixed;
+        top: 50%;
+        z-index: 3;
     #rightArrow,
     #leftArrow {
+        position: fixed;
         display: none;
         &:hover {
                 cursor: pointer;
         }
         img {
-            z-index: 3;
         }
+    }
+    #leftArrow {
+        left: 380px;
+    }
+    #rightArrow {
+        left: 1000px;
     }
 }
