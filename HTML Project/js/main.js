@@ -22,7 +22,7 @@
 
     var documentElements = {
         imageArray: document.getElementsByTagName('img')
-    }
+        }
 
 
 // Event Listeners
@@ -40,9 +40,9 @@
             overlay.element.style.display = 'none';
             overlay.leftArrow.style.display = 'none';
             overlay.rightArrow.style.display = 'none';
-            for(var i = 0; i < documentElements.imageArray.length; i ++) {
-            documentElements.imageArray[i].removeAttribute('id');
-            }
+            // for(var i = 0; i < documentElements.imageArray.length; i ++) {
+            // documentElements.imageArray[i].removeAttribute('id');
+            // }
         })
 
     // (3) Click on arrows
@@ -76,44 +76,53 @@
     // (2) "goToNext"
 
             function goToNext () {
-                console.log('goToNext');
                 var gallery = [];
                 var currentImage = document.getElementById('current');
+                debugger;
                 for(var i = 0; i < documentElements.imageArray.length; i ++) {
-                documentElements.imageArray[i].removeAttribute('id');
                     if (documentElements.imageArray[i].classList.contains('gallery')) {
-                        gallery.push.documentElements.imageArray[i];
+                        gallery.push(documentElements.imageArray[i]);
                     }
                 }
-                var parentImage = currentImage.parentElement.parentElement; // goes from current image, to <a>, to <li>
-                var nextImage = parentImage.nextElementSibling.children[0].children[0]; // goes from parent <li> of CI to (1) next <li>, to (2) <a> child, to (3) <img> children
-                nextImage.setAttribute('id', 'current');
-                var imagesrc = nextImage.getAttribute('src');
-                if (currentImage === gallery[gallery.length]) {
-                    var firstImage = gallery[0].getAttribute('src');
-                    overlay.image.setAttribute('src', firstImage);
-                } else {
-                    overlay.image.setAttribute('src', imagesrc);
+                    if (currentImage === gallery[gallery.length - 1]) {
+                        var firstImage = gallery[0].getAttribute('src');
+                        overlay.image.setAttribute('src', firstImage);
+                        gallery[0].setAttribute('id', 'current');
+                    } else {
+                        debugger;
+                        var parentImage = currentImage.parentElement.parentElement; // goes from current image, to <a>, to <li>
+                        var nextImage = parentImage.nextElementSibling.children[0].children[0]; // goes from parent <li> of CI to (1) next <li>, to (2) <a> child, to (3) <img> children
+                        var imagesrc = nextImage.getAttribute('src');
+                        overlay.image.setAttribute('src', imagesrc);
+                        nextImage.setAttribute('id', 'current');
+                    }
+                    currentImage.removeAttribute('id');
                 }
-                debugger;
-            }
 
     // (2) "goToPrevious"
 
-            function goToPrevious () {
-                console.log('goToPrevious');
-                var currentImage = document.getElementById('current');
-                var parent = currentImage.parentElement.parentElement; // goes from current image, to <a>, to <li>
-                var previousImage = parent.previousElementSibling.children[0].children[0]; // goes from parent <li> of CI to (1) next <li>, to (2) <a> child, to (3) <img> children
-                for(var i = 0; i < documentElements.imageArray.length; i ++) {
-                documentElements.imageArray[i].removeAttribute('id');
-                }
-                previousImage.setAttribute('id', 'current');
-                var imagesrc = previousImage.getAttribute('src');
-                if (currentImage === gallery[0]) {
-                   var lastImage = gallery[gallery.length].getAttribute('src');
-                   overlay.image.setAttribute('src', lastImage);
-               } else {
-                overlay.image.setAttribute('src', imagesrc);
+        function goToPrevious () {
+            var gallery = [];
+            var currentImage = document.getElementById('current');
+            debugger;
+            for(var i = 0; i < documentElements.imageArray.length; i ++) {
+                if (documentElements.imageArray[i].classList.contains('gallery')) {
+                    gallery.push(documentElements.imageArray[i]);
                 }
             }
+                if (currentImage === gallery[0]) {
+                    var lastImage = gallery[gallery.length - 1].getAttribute('src');
+                    overlay.image.setAttribute('src', lastImage);
+                    gallery[gallery.length - 1].setAttribute('id', 'current');
+                } else {
+                    debugger;
+                    var parentImage = currentImage.parentElement.parentElement; // goes from current image, to <a>, to <li>
+                    var previousImage = parentImage.previousElementSibling.children[0].children[0]; // goes from parent <li> of CI to (1) next <li>, to (2) <a> child, to (3) <img> children
+                    var imagesrc = previousImage.getAttribute('src');
+                    overlay.image.setAttribute('src', imagesrc);
+                    previousImage.setAttribute('id', 'current');
+                }
+                currentImage.removeAttribute('id');
+            }
+
+        

@@ -126,8 +126,7 @@ footer {
         transition: background 1s ease-in;
         transform: scale(1.8) rotate(5deg); }
       footer ul li .social-icon {
-        border-radius: 25px;
-        background: lightslategray; }
+        border-radius: 25px; }
   footer p {
     text-align: center;
     font-size: 12px; }
