@@ -124,5 +124,3 @@
                 }
                 currentImage.removeAttribute('id');
             }
-
-        

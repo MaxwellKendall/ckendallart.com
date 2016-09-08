@@ -8,49 +8,61 @@
     top: 0;
     bottom: 0;
     display: none;
+    z-index: 2;
     justify-content: center;
     align-items: center;
 
     img {
         margin: auto;
-        max-height: 600px;
-        max-width: 500px;
+        height: 450px;
+        width: 350px;
         position: fixed;
-    //     @include media-query($tablet) {
-    //     height: 300px;
-    //     width: 400px;
-    //     }
-    //     @include media-query($desktop) {
-    //     height: 400px;
-    //     width: 450px;
-    //     }
+        @include media-query($tablet) {
+            width: 500px;
+            height: 600px;
+        }
+        // @include media-query($desktop) {
+        //     width: 35%; //should be 600px height & 500px width
+        // }
     }
 }
-
     #arrows {
         display: flex;
-        // position: fixed;
-        justify-content: center;
-        align-items: center;
-        align-self: center;
-        margin: auto;
         position: fixed;
+        right: 48%;
+        left: 48%;
+        bottom: 50%;
         top: 50%;
         z-index: 3;
     #rightArrow,
     #leftArrow {
         position: fixed;
         display: none;
+        @include media-query($tablet) {
+        }
         &:hover {
                 cursor: pointer;
         }
         img {
+
         }
     }
     #leftArrow {
-        left: 380px;
+        left: 0.01em;
+        @include media-query($tablet) {
+            left: 2em;
+        }
+        @include media-query($desktop) {
+            left: 7em;
     }
+}
     #rightArrow {
-        left: 1000px;
+        right: 0.01em;
+        @include media-query($tablet) {
+            right: 2em;
+        }
+        @include media-query($desktop) {
+            right: 7em;
+        }
     }
 }
