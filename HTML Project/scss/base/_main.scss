@@ -4,8 +4,23 @@
 }
 
 .main-page {
-    background-image: url("../img/test.jpeg");
+    background-image: url("../img/testimage_mobile.jpg");
     background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    @include media-query($tablet) {
+        background-image: url("../img/testimg_tablet.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    @include media-query($desktop) {
+        background-image: url("../img/test.jpeg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 }
 
 hr {
