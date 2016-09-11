@@ -1,0 +1,10 @@
+#svg-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    #svg {
+        border-radius: 500px;
+        align-self: center;
+        width: 50%;
+    }
+}
