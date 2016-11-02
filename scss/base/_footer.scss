@@ -10,23 +10,23 @@
                 list-style-type: none;
                 // padding-left: 0;
                 margin: .25em;
-                img {
+                &:hover {
+                        #svg {
+                            fill: orange;
+                        }
+                    }
+                svg {
                     width: 25px;
+                    height: 25px;
                     @include media-query($tablet) {
                         width: 25px;
+                        height: 25px;
                     }
                     @include media-query($desktop) {
                         width: 25px;
+                        height: 25px;
                     }
                 }
-                &:hover {
-                        img {
-                            background: rgba(0,0,255,0.5);
-                            transition: background 1s ease-in;
-                            transform: scale(1.8) rotate(5deg);
-                        }
-                    }
-
                 .social-icon {
                     border-radius: 25px;
                 }

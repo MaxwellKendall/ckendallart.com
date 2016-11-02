@@ -141,18 +141,19 @@ footer {
     footer ul li {
       list-style-type: none;
       margin: .25em; }
-      footer ul li img {
-        width: 25px; }
+      footer ul li:hover #svg {
+        fill: orange; }
+      footer ul li svg {
+        width: 25px;
+        height: 25px; }
         @media (min-width: 768px) {
-          footer ul li img {
-            width: 25px; } }
+          footer ul li svg {
+            width: 25px;
+            height: 25px; } }
         @media (min-width: 1024px) {
-          footer ul li img {
-            width: 25px; } }
-      footer ul li:hover img {
-        background: rgba(0, 0, 255, 0.5);
-        transition: background 1s ease-in;
-        transform: scale(1.8) rotate(5deg); }
+          footer ul li svg {
+            width: 25px;
+            height: 25px; } }
       footer ul li .social-icon {
         border-radius: 25px; }
   footer p {
@@ -171,7 +172,7 @@ footer {
 .images {
   padding: 0; }
   .images li {
-    margin: 1em; }
+    margin: 15px; }
   .images img {
     width: 250px;
     height: 250px; }
@@ -181,7 +182,7 @@ footer {
         height: 450px; } }
     @media (min-width: 1024px) {
       .images img {
-        width: 400px;
+        width: 450px;
         height: 500px; } }
 
 #overlay {
@@ -237,14 +238,5 @@ footer {
     @media (min-width: 1024px) {
       #arrows #rightArrow {
         right: 7em; } }
-
-#svg-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  #svg-wrapper #svg {
-    border-radius: 500px;
-    align-self: center;
-    width: 50%; }
 
 /*# sourceMappingURL=application.css.map */
