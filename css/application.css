@@ -5,7 +5,8 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 100vh; }
+  min-height: 100vh;
+  background: linear-gradient(to left top, #BBDEFB, #03A9F4); }
   @media (min-width: 768px) {
     .main-page {
       background-position: center;
@@ -71,13 +72,13 @@ h1, h2, h3, p {
       transition: color 0.7s ease-in; }
   .header h2 {
     margin: 10px 0 10px 0px;
-    color: black; }
+    color: white; }
   .header li:hover {
     transform: scale(1.2);
     transition: transform .25s ease-in; }
   .header a {
     text-decoration: none;
-    color: black; }
+    color: white; }
     .header a:hover {
       color: rgba(0, 0, 225, 0.5);
       transform: scale(10);
